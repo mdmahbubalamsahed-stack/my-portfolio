@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Mahbub Alam</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <a class="logo" href="index.html">M<span>A</span></a>
+  <button class="menu-btn" id="menuBtn">☰</button>
+  <nav id="nav">
+    <a href="index.html">Home</a><a href="about.html">About</a>
+    <a class="active" href="projects.html">Projects</a><a href="index.html#contact">Contact</a>
+  </nav>
+  <a class="cv-btn" href="#">Download CV ↧</a>
+</header>
+
+<main class="page">
+<section class="projects-heading">
+  <div class="page-heading"><h1>My Projects</h1><span></span></div>
+  <div class="filters">
+    <button class="filter active" data-filter="all">All</button>
+    <button class="filter" data-filter="web-design">Web Design</button>
+    <button class="filter" data-filter="web-development">Web Development</button>
+    <button class="filter" data-filter="python">Python</button>
+  </div>
+</section>
+
+<section class="project-grid">
+  <article class="card project" data-category="web-design">
+    <div class="project-image gradient-one">Portfolio</div>
+    <div class="project-body"><h3>Portfolio Website</h3><small>Web Design</small><p>A personal portfolio website to showcase my skills and projects.</p><div><a class="mini-btn" href="#">◉ Live Demo</a><a class="mini-btn" href="#">⌘ View Code</a></div></div>
+  </article>
+  <article class="card project" data-category="web-development">
+    <div class="project-image gradient-two">Student Management</div>
+    <div class="project-body"><h3>Student Management System</h3><small>Web Development</small><p>A web application to manage students' information, add, update and delete data.</p><div><a class="mini-btn" href="#">◉ Live Demo</a><a class="mini-btn" href="#">⌘ View Code</a></div></div>
+  </article>
+  <article class="card project" data-category="python">
+    <div class="project-image gradient-three">CGPA Calculator</div>
+    <div class="project-body"><h3>CGPA Calculator</h3><small>Python Project</small><p>A simple Python application to calculate CGPA easily.</p><div><a class="mini-btn" href="#">⌘ View Code</a></div></div>
+  </article>
+</section>
+</main>
+
+<footer><p>© <span id="year"></span> Mahbub Alam. All rights reserved.</p><div><a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a></div></footer>
+<script src="script.js"></script>
+</body>
+</html>

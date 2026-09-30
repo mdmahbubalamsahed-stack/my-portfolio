@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Mahbub Alam</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <a class="logo" href="index.html">M<span>A</span></a>
+
+  <button class="menu-btn" id="menuBtn">☰</button>
+
+  <nav id="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a class="active" href="contact.html">Contact</a>
+  </nav>
+
+  <a class="cv-btn" href="#">Download CV ↧</a>
+</header>
+
+<main class="page">
+
+  <section class="page-heading">
+    <h1>Contact Me</h1>
+    <span></span>
+  </section>
+
+  <section class="contact-grid">
+
+    <div class="contact-info">
+      <h2>Let's Work Together</h2>
+      <p>
+        Have a project, question, or idea? Feel free to contact me.
+        I'll try to get back to you as soon as possible.
+      </p>
+
+      <div class="contact-card card">
+        <div class="contact-item">
+          <div class="contact-icon">✉</div>
+          <div>
+            <small>Email</small>
+            <strong>mdmahbubalamsahed@gmail.com</strong>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">☎</div>
+          <div>
+            <small>Phone</small>
+            <strong>+880 1306061905</strong>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">⌖</div>
+          <div>
+            <small>Location</small>
+            <strong>Rajshahi, Bangladesh</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="social-contact">
+        <a href="#">Facebook</a>
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="card contact-form-card">
+      <form id="contactForm">
+        <label>Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label>Your Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label>Subject</label>
+        <input type="text" id="subject" placeholder="Enter subject" required>
+
+        <label>Your Message</label>
+        <textarea id="message" rows="6" placeholder="Write your message..." required></textarea>
+
+        <button type="submit" class="btn primary send-btn">Send Message →</button>
+      </form>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <p>© <span id="year"></span> Mahbub Alam. All rights reserved.</p>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+
+  alert("Thank you, " + name + "! Your message has been submitted.");
+
+  this.reset();
+});
+</script>
+
+</body>
+</html>
