@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,12 +35,14 @@
 
     <div class="contact-info">
       <h2>Let's Work Together</h2>
+
       <p>
         Have a project, question, or idea? Feel free to contact me.
         I'll try to get back to you as soon as possible.
       </p>
 
       <div class="contact-card card">
+
         <div class="contact-item">
           <div class="contact-icon">✉</div>
           <div>
@@ -52,7 +55,7 @@
           <div class="contact-icon">☎</div>
           <div>
             <small>Phone</small>
-            <strong>+880 1306061905</strong>
+            <strong>+8809658910458</strong>
           </div>
         </div>
 
@@ -63,31 +66,69 @@
             <strong>Rajshahi, Bangladesh</strong>
           </div>
         </div>
+
       </div>
 
       <div class="social-contact">
-        <a href="#">Facebook</a>
-        <a href="#">GitHub</a>
-        <a href="#">LinkedIn</a>
+        <a href="https://www.facebook.com/share/1EfZUL4zzH/">Facebook</a>
+        <a href="https://github.com/mdmahbubalamsahed-stack">GitHub</a>
+        <a href="https://www.linkedin.com/in/mahbub-alam-04a0b4387/">LinkedIn</a>
+        <a href="https://www.instagram.com/mdmahbubalam.799?stkn=MTZxbGs1ZmZvcXh4Nw==">Instagram</a>
       </div>
     </div>
 
     <div class="card contact-form-card">
-      <form id="contactForm">
-        <label>Your Name</label>
-        <input type="text" id="name" placeholder="Enter your name" required>
 
-        <label>Your Email</label>
-        <input type="email" id="email" placeholder="Enter your email" required>
+      <form id="contact-form">
 
-        <label>Subject</label>
-        <input type="text" id="subject" placeholder="Enter subject" required>
+        <label for="name">Your Name</label>
+        <input
+          type="text"
+          id="name"
+          name="from_name"
+          placeholder="Enter your name"
+          required
+        >
 
-        <label>Your Message</label>
-        <textarea id="message" rows="6" placeholder="Write your message..." required></textarea>
+        <label for="email">Your Email</label>
+        <input
+          type="email"
+          id="email"
+          name="from_email"
+          placeholder="Enter your email"
+          required
+        >
 
-        <button type="submit" class="btn primary send-btn">Send Message →</button>
+        <label for="subject">Subject</label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          placeholder="Enter subject"
+          required
+        >
+
+        <label for="message">Your Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          placeholder="Write your message..."
+          required
+        ></textarea>
+
+        <button
+          type="submit"
+          id="send-btn"
+          class="btn primary send-btn"
+        >
+          Send Message →
+        </button>
+
+        <p id="form-status" role="status"></p>
+
       </form>
+
     </div>
 
   </section>
@@ -96,6 +137,7 @@
 
 <footer>
   <p>© <span id="year"></span> Mahbub Alam. All rights reserved.</p>
+
   <div>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -104,19 +146,18 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<!-- EmailJS Library -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
+<!-- EmailJS Public Key -->
 <script>
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  const name = document.getElementById("name").value;
-
-  alert("Thank you, " + name + "! Your message has been submitted.");
-
-  this.reset();
-});
+  emailjs.init({
+    publicKey: "rK_nIy9E1V8OL2Lcp"
+  });
 </script>
+
+<!-- Main JavaScript -->
+<script src="script.js"></script>
 
 </body>
 </html>
